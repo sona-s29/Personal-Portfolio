@@ -1,0 +1,186 @@
+.home-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px;
+  background: linear-gradient(to right, #2c275b, #302b63, #24243e);
+  color: white;
+  min-height: 100vh;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Left Section */
+.left-section {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.left-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.left-section span {
+  color: #c248d2;
+  font-size: 3.5rem;
+}
+
+.left-section p {
+  font-size: 1.1rem;
+  padding: 10px 0;
+}
+
+/* Download Button */
+.download-btn {
+  margin-top: 20px;
+  background-color: #5e43d6;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(94, 67, 214, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.download-btn:hover {
+  background: linear-gradient(90deg, #c248d2, #7f5af0);
+  box-shadow: 0 4px 16px rgba(194, 72, 210, 0.25);
+  transform: scale(1.05);
+}
+
+.download-icon {
+  margin-right: 8px;
+}
+
+/* Right Section */
+.right-section {
+    padding: 30px;
+
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid #c248d2;
+  
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .left-section {
+    padding-right: 0;
+  }
+
+  .left-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .left-section p {
+    font-size: 1.1rem;
+  }
+
+  .profile-img {
+    width: 250px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .left-section h1 {
+    font-size: 2rem;
+  }
+
+  .left-section p {
+    font-size: 1rem;
+  }
+
+  .download-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .profile-img {
+    width: 300px;
+  }
+}
+
+.animatedName {
+  background: linear-gradient(90deg, #c248d2, #5e43d6, #7f5af0, #c248d2);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 3s linear infinite;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.fadeInLeft {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeInLeftAnim 1s ease forwards;
+}
+
+@keyframes fadeInLeftAnim {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInRight {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: fadeInRightAnim 1s 0.3s ease forwards;
+}
+
+@keyframes fadeInRightAnim {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .animatedName {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .animatedName {
+    font-size: 1.5rem;
+  }
+}

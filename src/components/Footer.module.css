@@ -1,0 +1,98 @@
+.footer {
+  background: linear-gradient(to right, #0f0c29, #12102e, #191930);
+  padding: 30px 20px;
+  color: #ccc;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footerContent {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin-bottom: 12px;
+}
+
+.copy {
+  font-size: 13px;
+  color: #888;
+  margin-top: 16px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.iconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  color: #ccc;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+.icon:hover {
+  color: var(--icon-hover, #c248d2);
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: 130%;
+  transform: translateX(-50%) scale(0.85);
+  background: var(--tooltip-color, #c248d2);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s, background 0.3s;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.13);
+  letter-spacing: 0.5px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.iconWrapper:hover .tooltip,
+.iconWrapper:focus-within .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.08);
+}
+
+/* Tooltip arrow */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--tooltip-color, #c248d2) transparent transparent transparent;
+}
+
+@media (max-width: 600px) {
+  .icon {
+    font-size: 18px;
+  }
+  .tooltip {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}

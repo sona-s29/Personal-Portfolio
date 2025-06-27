@@ -1,0 +1,163 @@
+.servicesSection {
+ background: linear-gradient(to right,#24243e, #302b63,#2c275b);
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.underline {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #c248d2;  margin: 10px auto 20px;
+  border-radius: 4px;
+}
+
+
+.sectionTitle {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.servicesGrid {
+  display: none;
+}
+
+.infiniteScrollWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.infiniteScroll {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  animation: scrollX 16s linear infinite;
+  align-items: stretch;
+}
+
+@keyframes scrollX {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.card {
+  min-width: 280px;
+  margin: 0 16px;
+  background: rgba(26, 21, 57, 0.412); 
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 1;
+  animation: none;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  font-size: 40px;
+  color: white ;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #c248d2;
+}
+
+.card p {
+  font-size: 18px;
+  color: white;
+}
+
+/* Entrance animation */
+@keyframes fadeUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Optional delay animations */
+.delay0 {
+  animation-delay: 0.1s;
+}
+.delay1 {
+  animation-delay: 0.2s;
+}
+.delay2 {
+  animation-delay: 0.3s;
+}
+.delay3 {
+  animation-delay: 0.4s;
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .card {
+    min-width: 220px;
+    margin: 0 10px;
+    padding: 24px 12px;
+  }
+  .icon {
+    font-size: 32px;
+  }
+  .infiniteScroll {
+    animation-duration: 30s;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesSection {
+    padding: 40px 5px;
+  }
+  .sectionTitle {
+    font-size: 22px;
+  }
+  .card {
+    min-width: 85vw;
+    max-width: 95vw;
+    margin: 0 4vw;
+    padding: 18px 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .icon {
+    font-size: 24px;
+  }
+  .card h3 {
+    font-size: 17px;
+    text-align: center;
+  }
+  .card p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .infiniteScroll {
+    animation-duration: 30s;
+  }
+}
