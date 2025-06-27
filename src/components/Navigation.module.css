@@ -14,6 +14,28 @@
   box-sizing: border-box;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  font-size: 2rem;
+  color: #c248d2;
+  filter: drop-shadow(0 0 8px #c248d2);
+  animation: logoIconGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes logoIconGlow {
+  0% {
+    filter: drop-shadow(0 0 8px #c248d2);
+  }
+  100% {
+    filter: drop-shadow(0 0 12px #c248d2) drop-shadow(0 0 20px #5e43d6);
+  }
+}
+
 .logo h2 {
   font-size: 1.8rem;
   font-weight: bold;

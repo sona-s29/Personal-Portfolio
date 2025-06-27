@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Navigation.module.css';
+import { FaCode } from 'react-icons/fa';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -7,6 +8,7 @@ function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo + ' ' + styles.logoGradient + ' ' + styles.logoFadeIn}>
+        <FaCode className={styles.logoIcon} />
         <h2>SONA KUMARI</h2>
       </div>
 
