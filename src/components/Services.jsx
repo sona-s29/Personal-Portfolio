@@ -5,9 +5,9 @@ import { faCode, faPaintBrush, faMobileAlt, faRocket } from '@fortawesome/free-s
 
 const services = [
   {
-    title: 'Frontend Development',
+    title: 'Web Development',
     icon: faCode,
-    desc: 'Responsive and performant user interfaces using React, HTML, CSS, and JavaScript.',
+    desc: "I design and develop sleek, scalable web solutions using React, Node.js, and MongoDB."
   },
   {
     title: 'UI/UX Design',

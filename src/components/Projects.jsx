@@ -28,11 +28,11 @@ const projects = [
   },
   {
     id: 4,
-    title: 'To Do List',
-    description: 'A clean and functional to-do list app built with React to help you organize tasks and boost productivity.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'React'],
-    link: 'https://github.com/sona-s29/To-Do-List',
-    image: 'https://cdn.dribbble.com/userupload/27483813/file/original-6938adf595105de6cb356b6b00d46dae.gif'
+    title: 'User Enquiry Form',
+    description: '"A user enquiry form built with the MERN stack that allows users to view, submit, edit and update their details"',
+    tags: ['React', 'Node,js', 'Express.js', 'MongoDB'],
+    link: 'https://github.com/sona-s29/User-Enquiry-Form',
+    image: 'https://saibabacartransport.com/assets/images/supplier.gif'
   }
 ];
 

@@ -1,13 +1,17 @@
 import React from 'react';
 import styles from './About.module.css';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaGitAlt, FaLaptopCode } from 'react-icons/fa';
-import { SiTailwindcss } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaGitAlt, FaLaptopCode, FaNodeJs } from 'react-icons/fa';
+import { SiTailwindcss, SiExpress, SiMongodb, SiMongoose } from 'react-icons/si';
 
 const skills = [
   { name: 'HTML5', icon: <FaHtml5 color="#e44d26" /> },
   { name: 'CSS3', icon: <FaCss3Alt color="#1572b6" /> },
   { name: 'JavaScript', icon: <FaJs color="#f7df1e" /> },
   { name: 'React', icon: <FaReact color="#61dafb" /> },
+  { name: 'Node.js', icon: <FaNodeJs color="#339933" /> },
+  { name: 'Express.js', icon: <SiExpress color="#000000" /> },
+  { name: 'MongoDB', icon: <SiMongodb color="#47a248" /> },
+  { name: 'Mongoose', icon: <SiMongoose color="#880000" /> },
   { name: 'Bootstrap', icon: <FaBootstrap color="#7952b3" /> },
   { name: 'Tailwind CSS', icon: <SiTailwindcss color="#38bdf8" /> },
   { name: 'Git & GitHub', icon: <FaGitAlt color="#f34f29" /> },
