@@ -30,7 +30,7 @@ const projects = [
     id: 4,
     title: 'User Enquiry Form',
     description: '"A user enquiry form built with the MERN stack that allows users to view, submit, edit and update their details"',
-    tags: ['React', 'Node,js', 'Express.js', 'MongoDB'],
+    tags: ['React', 'Node.js', 'Express.js', 'MongoDB'],
     link: 'https://github.com/sona-s29/User-Enquiry-Form',
     image: 'https://saibabacartransport.com/assets/images/supplier.gif'
   }

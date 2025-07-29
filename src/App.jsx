@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import Navigation from './components/Navigation.jsx';
 import Home from './components/Home.jsx';
 import About from './components/About.jsx';
