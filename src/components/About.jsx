@@ -36,7 +36,7 @@ function About() {
 
       <div className={styles['about-text']}>
         <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.1s' }}>
-          Hello, I'm a <strong>Front-End Developer</strong> with a creative eye and a problem-solving mindset. I specialize in building responsive, user-friendly websites and web applications that combine clean design with functional code.
+          Hello, I'm a <strong>Front-End Developer</strong> with a creative eye and a problem-solving mindset.I specialize in building responsive, user-friendly websites and web applications that combine clean design with functional code.
         </p>
         <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.3s' }}>
           Whether it's developing from scratch or breathing life into a UI/UX design, I focus on delivering smooth, performance-optimized, and accessible user experiences.
