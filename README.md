@@ -1,6 +1,6 @@
 # React Portfolio – Sona Kumari
 
-A modern, animated, and fully responsive portfolio website built with React and Vite. Showcasing my projects, skills, education, and services as a passionate Front-End Developer.
+A modern, animated, and fully responsive portfolio website built with React and Vite. Showcasing my projects, skills, education, and services as a passionate Full-Stack Developer.
 
 ---
 
