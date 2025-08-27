@@ -33,7 +33,6 @@ function About() {
   return (
     <section className={styles['about-section']} id="About">
       <h2 className={styles['section-title'] + ' ' + styles['popInTitle']}>About Me <span className={styles.underline + ' ' + styles.underlinePop}></span></h2>
-
       <div className={styles['about-text']}>
         <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.1s' }}>
           Hello, I'm a <strong>Front-End Developer</strong> with a creative eye and a problem-solving mindset.I specialize in building responsive, user-friendly websites and web applications that combine clean design with functional code.
