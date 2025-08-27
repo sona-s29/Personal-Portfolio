@@ -1,30 +1,35 @@
 import React from 'react';
 import styles from './Services.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faPaintBrush, faMobileAlt, faRocket } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faPaintBrush, faMobileAlt, faRocket, faCogs, faDatabase } from '@fortawesome/free-solid-svg-icons';
 
-const services = [
-  {
-    title: 'Web Development',
-    icon: faCode,
-    desc: "I design and develop sleek, scalable web solutions using React, Node.js, and MongoDB."
-  },
-  {
-    title: 'UI/UX Design',
-    icon: faPaintBrush,
-    desc: 'Clean and user-friendly designs using Figma, Adobe XD, and design principles.',
-  },
-  {
-    title: 'Mobile-First Design',
-    icon: faMobileAlt,
-    desc: 'Ensuring mobile responsiveness and accessibility across all screen sizes.',
-  },
-  {
-    title: 'Deployment & Hosting',
-    icon: faRocket,
-    desc: 'Deploying apps with Netlify, Vercel, Firebase and managing performance.',
-  },
-];
+  const services = [
+            {
+                title: 'Full-Stack Development',
+                icon: faCogs,
+                desc: "Building complete web applications from front to back, leveraging my expertise in the MERN stack."
+            },
+            {
+                title: 'Frontend Development',
+                icon: faCode,
+                desc: "Creating responsive and interactive user interfaces using modern frameworks like React.js and Tailwind CSS."
+            },
+            {
+                title: 'Responsive Design',
+                icon: faMobileAlt,
+                desc: 'Ensuring seamless user experiences across all devices, from desktops to mobile phones, with a mobile-first approach.'
+            },
+            {
+                title: 'Deployment & Hosting',
+                icon: faRocket,
+                desc: 'Deploying robust applications to production environments using platforms like Vercel for seamless access.'
+            },
+            {
+                title: 'MERN Stack Expertise',
+                icon: faDatabase,
+                desc: 'Developing dynamic, data-driven applications by integrating MongoDB, Express.js, React.js, and Node.js.'
+            },
+        ];
 
 function Services() {
   // Duplicate the services array for seamless looping
