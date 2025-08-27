@@ -34,7 +34,7 @@ function About() {
     <section className={styles['about-section']} id="About">
       <h2 className={styles['section-title'] + ' ' + styles['popInTitle']}>About Me <span className={styles.underline + ' ' + styles.underlinePop}></span></h2>
       <div className={styles['about-text']}>
-        <p className={styles['aboun tFadeIn']} style={{ animationDelay: '0.1s' }}>
+        <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.1s' }}>
           Hello, I'm an aspiring <strong>Full-Stack Developer</strong> with expertise in the MERN stack (MongoDB, Express, React, Node.js).
         </p>
         <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.3s' }}>
