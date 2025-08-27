@@ -34,20 +34,27 @@ function About() {
     <section className={styles['about-section']} id="About">
       <h2 className={styles['section-title'] + ' ' + styles['popInTitle']}>About Me <span className={styles.underline + ' ' + styles.underlinePop}></span></h2>
       <div className={styles['about-text']}>
-        <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.1s' }}>
-          Hello, I'm a <strong>Front-End Developer</strong> with a creative eye and a problem-solving mindset.I specialize in building responsive, user-friendly websites and web applications that combine clean design with functional code.
+        <p className={styles['aboun tFadeIn']} style={{ animationDelay: '0.1s' }}>
+          Hello, I'm an aspiring <strong>Full-Stack Developer</strong> with expertise in the MERN stack (MongoDB, Express, React, Node.js).
         </p>
         <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.3s' }}>
-          Whether it's developing from scratch or breathing life into a UI/UX design, I focus on delivering smooth, performance-optimized, and accessible user experiences.
+          Strong proficiency in frontend development, building responsive and intuitive interfaces with React.js, JavaScript, and Tailwind CSS.
         </p>
         <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.5s' }}>
-          I enjoy working with technologies like HTML5, CSS3, JavaScript, React.js, and Tailwind CSS, and I'm always exploring new tools to stay ahead in this fast-moving digital world. From wireframes to final deployment, I care deeply about every step of the development process.
+          Skilled in backend development, creating secure, scalable APIs with Node.js and Express, and managing data with MongoDB.
         </p>
         <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.7s' }}>
-          When I'm not coding, I'm probably learning something new, experimenting with UI ideas, or working on passion projects that push my limits.
+          Focused on delivering applications that balance performance, usability, and modern design principles.
+
+          Experienced in solving complex problems through logical architecture and seamless frontend-backend integration.
+        </p>
+        <p>
+          Committed to continuous learning and staying updated with the latest web technologies.
+
+          Driven to build innovative, user-friendly, and scalable web applications that create real value.
         </p>
         <strong>
-          <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.9s' }}>Let's create something extraordinary together.</p>
+          <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.9s' }}>"Let's create something extraordinary together."</p>
         </strong>
       </div>
 
