@@ -8,6 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faGithub,
+  faInstagram,
   faLinkedin,
   faTwitter,
   faXTwitter,
@@ -31,6 +32,12 @@ const socialLinks = [
     icon: faXTwitter,
     name: 'X (Twitter)',
     color: '#000000',
+  },
+  {
+    href: 'https://instagram.com/sona_sona.29',
+    icon: faInstagram,
+    name: 'Instagram',
+    color: '#E1306C',
   },
 ];
 
