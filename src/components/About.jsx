@@ -1,101 +1,82 @@
-import React from 'react';
-import styles from './About.module.css';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaGitAlt, FaLaptopCode, FaNodeJs } from 'react-icons/fa';
-import { SiTailwindcss, SiExpress, SiMongodb, SiMongoose } from 'react-icons/si';
+import { personalInfo, education } from "../data/mock";
+import { Separator } from "./ui/separator";
 
-const skills = [
-  { name: 'HTML5', icon: <FaHtml5 color="#e44d26" /> },
-  { name: 'CSS3', icon: <FaCss3Alt color="#1572b6" /> },
-  { name: 'JavaScript', icon: <FaJs color="#f7df1e" /> },
-  { name: 'React', icon: <FaReact color="#61dafb" /> },
-  { name: 'Node.js', icon: <FaNodeJs color="#339933" /> },
-  { name: 'Express.js', icon: <SiExpress color="#000000" /> },
-  { name: 'MongoDB', icon: <SiMongodb color="#47a248" /> },
-  { name: 'Mongoose', icon: <SiMongoose color="#880000" /> },
-  { name: 'Bootstrap', icon: <FaBootstrap color="#7952b3" /> },
-  { name: 'Tailwind CSS', icon: <SiTailwindcss color="#38bdf8" /> },
-  { name: 'Git & GitHub', icon: <FaGitAlt color="#f34f29" /> },
-  { name: 'Responsive', icon: <FaLaptopCode color="#5e43d6" /> },
-];
-
-const education = [
-  {
-    year: '2023 - 2026',
-    institution: 'World College Of Technology And Management (MDU Rohtak)',
-    desc: `I'm currently pursuing a Bachelor of Computer Applications (BCA), building a strong foundation in programming, web technologies, and software development. This journey has fueled my passion for front-end development, allowing me to apply what I learn through real-world projects, continuous practice, and creative experimentation.`
-  },
-  // Add more education/experience entries here if needed
-];
-
-function About() {
-  // Duplicate skills for seamless infinite scroll
-  const infiniteSkills = [...skills, ...skills];
+const About = () => {
   return (
-    <section className={styles['about-section']} id="About">
-      <h2 className={styles['section-title'] + ' ' + styles['popInTitle']}>About Me <span className={styles.underline + ' ' + styles.underlinePop}></span></h2>
-      <div className={styles['about-text']}>
-        <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.1s' }}>
-          Hello, I'm an aspiring <strong>Full-Stack Developer</strong> with expertise in the MERN stack (MongoDB, Express, React, Node.js).
-        </p>
-        <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.3s' }}>
-          Strong proficiency in frontend development, building responsive and intuitive interfaces with React.js, JavaScript, and Tailwind CSS.
-        </p>
-        <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.5s' }}>
-          Skilled in backend development, creating secure, scalable APIs with Node.js and Express, and managing data with MongoDB.
-        </p>
-        <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.7s' }}>
-          Focused on delivering applications that balance performance, usability, and modern design principles.
-
-          Experienced in solving complex problems through logical architecture and seamless frontend-backend integration.
-        </p>
-        <p>
-          Committed to continuous learning and staying updated with the latest web technologies.
-
-          Driven to build innovative, user-friendly, and scalable web applications that create real value.
-        </p>
-        <strong>
-          <p className={styles['aboutFadeIn']} style={{ animationDelay: '0.9s' }}>"Let's create something extraordinary together."</p>
-        </strong>
-      </div>
-
-      {/* Infinite Scroll Skills Section */}
-      <div style={{ textAlign: 'center', width: '100%' }}>
-        <h3 className={styles.skillsHeading}>Skills</h3>
-        <span className={styles.skillsUnderline}></span>
-      </div>
-      <div className={styles.infiniteScrollWrapper}>
-        <div className={styles.infiniteScroll}>
-          {infiniteSkills.map((skill, i) => (
-            <div className={styles.skillCardScroll} key={skill.name + '-' + i}>
-              <div className={styles.skillIconScroll}>{skill.icon}</div>
-              <div className={styles.skillNameScroll}>{skill.name}</div>
-            </div>
-          ))}
+    <section id="about" className="py-24 bg-[#0a0a0b] relative">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="text-white">About </span>
+            <span className="text-blue-500">Me</span>
+          </h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
         </div>
-      </div>
 
-      {/* Education Timeline Section */}
-      <div className={styles.eduTimelineSection}>
-        <h3 className={styles.educationHeading}>Education</h3>
-        <span className={styles.educationUnderline}></span>
-        <div className={styles.eduTimelineWrapper}>
-          <div className={styles.eduTimelineLine}></div>
-          <ul className={styles.eduTimelineList}>
-            {education.map((edu, i) => (
-              <li className={styles.eduTimelineItem} key={edu.year + '-' + i}>
-                <div className={styles.eduTimelineDot}></div>
-                <div className={styles.eduTimelineCard}>
-                  <div className={styles.eduTimelineYear}>{edu.year}</div>
-                  <div className={styles.eduTimelineInst}>{edu.institution}</div>
-                  <div className={styles.eduTimelineDesc}>{edu.desc}</div>
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* About Content */}
+          <div className="space-y-6">
+            <div className="flex items-start space-x-3">
+              <User className="text-blue-500 mt-1 flex-shrink-0" size={24} />
+              <div>
+                <h3 className="text-2xl font-semibold text-white mb-4">Full Stack Developer</h3>
+                <p className="text-gray-400 leading-relaxed mb-4">
+                  Full Stack Developer with practical experience in React.js, Node.js, and MongoDB, building modern web applications. 
+                  Focused on clean code, performance optimization, and delivering seamless user experiences.
+                </p>
+                <p className="text-gray-400 leading-relaxed">
+                  Currently working as a Full Stack Developer Intern at Netcradus, contributing to scalable CRM solutions 
+                  and enhancing both frontend responsiveness and backend API integration.
+                </p>
+              </div>
+            </div>
+
+            <Separator className="bg-white/10" />
+
+            {/* Quick Info */}
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <p className="text-gray-500 text-sm mb-1">Email</p>
+                <p className="text-gray-300 text-sm">{personalInfo.email}</p>
+              </div>
+              <div>
+                <p className="text-gray-500 text-sm mb-1">Location</p>
+                <p className="text-gray-300 text-sm">{personalInfo.location}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Education Card */}
+          <div>
+            <Card className="bg-gradient-to-br from-white/5 to-white/[0.02] border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
+              <CardHeader>
+                <div className="flex items-center space-x-3 mb-2">
+                  <div className="p-2 bg-blue-500/10 rounded-lg">
+                    <GraduationCap className="text-blue-500" size={24} />
+                  </div>
+                  <CardTitle className="text-white text-xl">Education</CardTitle>
                 </div>
-              </li>
-            ))}
-          </ul>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                {education.map((edu) => (
+                  <div key={edu.id} className="space-y-2">
+                    <h4 className="text-lg font-semibold text-white">{edu.degree}</h4>
+                    <p className="text-blue-400 text-sm font-medium">{edu.institution}</p>
+                    <p className="text-gray-400 text-sm">{edu.location}</p>
+                    <div className="flex items-center justify-between pt-2">
+                      <span className="text-gray-500 text-sm">{edu.duration}</span>
+                      <span className="text-cyan-400 font-semibold text-sm">CGPA: {edu.cgpa}</span>
+                    </div>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default About;

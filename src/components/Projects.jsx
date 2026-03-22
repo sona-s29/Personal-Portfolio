@@ -1,88 +1,116 @@
-import React from 'react';
-import styles from './Projects.module.css';
+import React, { useState } from "react";
+import { ExternalLink, Github, ChevronRight } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import { projects } from "../data/mock";
 
-const projects = [
-    {
-    id: 1,
-    title: 'Job Portal',
-    description: "A MERN stack web application that connects job seekers and recruiters.",
-    tags: ['React', 'Node.js', 'Express.js', 'MongoDB'],
-    link: 'https://github.com/sona-s29/Job_portal',
-    image: 'https://assets-v2.lottiefiles.com/a/4ab59f98-1171-11ee-ae84-4701bf3b3b9e/MuEl9pAZMr.gif'
-  },
-  {
-    id:2 ,
-    title: 'Rock Paper Scissors',
-    description: 'A fun and interactive Rock Paper Scissors game built with JavaScript to challenge your luck and logic.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    link: 'https://github.com/sona-s29/rock-paper-scissors',
-    image: 'https://miro.medium.com/v2/resize:fit:1040/1*lQmRWLWbHQNZhb9DtcGEHg.gif'
-  },
-  {
-    id: 3,
-    title: 'Weather App',
-    description: 'A sleek and responsive weather app built with React that fetches real-time weather data using API integration.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'React'],
-    link: 'https://github.com/sona-s29/React-Weather-App',
-    image: 'https://i.pinimg.com/originals/e1/70/03/e17003d3a86823bea8a48e4ec03d33e9.gif'
-  },
-  {
-    id: 4,
-    title: 'User Enquiry Form',
-    description: "A user enquiry form built with the MERN stack that allows users to view, submit, edit and update their details",
-    tags: ['React', 'Node.js', 'Express.js', 'MongoDB'],
-    link: 'https://github.com/sona-s29/User-Enquiry-Form',
-    image: 'https://saibabacartransport.com/assets/images/supplier.gif'
-  },
-  
-   {
-    id: 5,
-    title: 'Calculator',
-    description: "Developed a fully functional advanced calculator web application.",
-    tags: ['React', 'Node.js', 'Express.js', 'MongoDB'],
-    link: 'https://github.com/sona-s29/Calculator',
-    image: 'https://cdn.pixabay.com/animation/2022/12/05/15/28/15-28-43-29_512.gif'
-  },
-    {
-    id: 6,
-    title: 'Pomodoro Timer',
-    description: "Developed a fully functional, responsive, and visually engaging Pomodoro Timer",
-     tags: ['HTML', 'CSS', 'JavaScript'],
-    link: 'https://github.com/sona-s29/pomodoro_timer',
-    image: 'https://metro.co.uk/wp-content/uploads/2021/11/The-Pomodoro-Technique-feature-d05e.gif?w=646'
-  },
-];
+const Projects = () => {
+  const [hoveredProject, setHoveredProject] = useState(null);
 
-function Projects() {
   return (
-    <section className={styles.projectSection} id="Projects" tabIndex={-1}>
-      <h2 className={styles.sectionTitle}>
-        My Work <span className={styles.underline}></span>
-      </h2>
-      <p className={styles.description}>
-        A glimpse into the projects where design meets code — crafted with creativity, precision, and purpose.
-      </p>
-      <div className={styles.projectGrid}>
-        {projects.map((project) => (
-          <div className={styles.projectCard} key={project.id}>
-            <img src={project.image} alt={project.title} className={styles.projectImg} />
-            <div className={styles.cardContent}>
-              <h3 className={styles.cardTitle}>{project.title}</h3>
-              <p className={styles.cardDesc}>{project.description}</p>
-              <div className={styles.tags}>
-                {project.tags.map((tag, index) => (
-                  <span key={index} className={styles.tag}>{tag}</span>
-                ))}
+    <section id="projects" className="py-24 bg-[#0a0a0b] relative">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="mb-16 animate-fade-in">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="text-white">Featured </span>
+            <span className="text-blue-500">Projects</span>
+          </h2>
+          <p className="text-gray-400 max-w-2xl">
+            Full-stack applications showcasing real-world problem solving and modern web development practices
+          </p>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mt-4"></div>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="space-y-8">
+          {projects.map((project, index) => (
+            <Card
+              key={project.id}
+              onMouseEnter={() => setHoveredProject(project.id)}
+              onMouseLeave={() => setHoveredProject(null)}
+              className={`bg-gradient-to-br from-white/5 to-white/[0.02] border-white/10 backdrop-blur-sm transition-all duration-500 ${
+                hoveredProject === project.id
+                  ? "border-blue-500/50 shadow-2xl shadow-blue-500/20 scale-[1.02]"
+                  : "hover:border-blue-500/30"
+              }`}
+            >
+              <div className="grid md:grid-cols-2 gap-8 p-8">
+                {/* Project Info */}
+                <div className="space-y-6">
+                  <div>
+                    <div className="flex items-center space-x-2 mb-3">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-xs text-gray-500 uppercase tracking-wider">Featured Project</span>
+                    </div>
+                    <CardTitle className="text-2xl text-white mb-3">{project.title}</CardTitle>
+                    <CardDescription className="text-gray-400 leading-relaxed">
+                      {project.description}
+                    </CardDescription>
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div>
+                    <h4 className="text-sm text-gray-500 uppercase tracking-wider mb-3">Tech Stack</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.techStack.map((tech, idx) => (
+                        <Badge
+                          key={idx}
+                          variant="outline"
+                          className="bg-blue-500/10 border-blue-500/30 text-blue-400 hover:bg-blue-500/20 hover:border-blue-500/50 transition-all duration-200"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Links */}
+                  <div className="flex flex-wrap gap-3">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-white/20 text-white hover:bg-white/5 hover:border-white/40 transition-all duration-300"
+                      onClick={() => alert("Demo link will be added")}
+                    >
+                      <ExternalLink size={16} className="mr-2" />
+                      Live Demo
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-white/20 text-white hover:bg-white/5 hover:border-white/40 transition-all duration-300"
+                      onClick={() => alert("GitHub link will be added")}
+                    >
+                      <Github size={16} className="mr-2" />
+                      View Code
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Key Achievements */}
+                <div className="space-y-4">
+                  <h4 className="text-sm text-gray-500 uppercase tracking-wider">Key Achievements</h4>
+                  <div className="space-y-3">
+                    {project.achievements.map((achievement, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-start space-x-3 p-3 rounded-lg bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-colors duration-300"
+                      >
+                        <ChevronRight className="text-blue-500 mt-0.5 flex-shrink-0" size={18} />
+                        <p className="text-gray-400 text-sm leading-relaxed">{achievement}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.viewBtn}>
-                View Project
-              </a>
-            </div>
-          </div>
-        ))}
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default Projects;
