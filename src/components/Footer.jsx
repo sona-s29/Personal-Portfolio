@@ -26,7 +26,7 @@ const Footer = () => {
           <div>
             <div className="text-2xl font-bold mb-4">
               <span className="text-white">{personalInfo?.name || "Sona"}</span>
-              <span className="text-blue-500">.</span>
+              {/* <span className="text-blue-500">.</span> */}
             </div>
 
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -91,21 +91,15 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM BAR */}
-        <div className="pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+       <div className="pt-8 border-t border-white/10">
+  <div className="flex justify-center items-center">
 
-            <p className="text-gray-400 text-sm">
-              © {currentYear} {personalInfo?.name || "Sona"}. All rights reserved.
-            </p>
+    <p className="text-gray-400 text-sm text-center">
+      © {currentYear} {personalInfo?.name || "Sona"}. All rights reserved.
+    </p>
 
-            <p className="text-gray-400 text-sm flex items-center">
-              Built with
-              <Heart size={14} className="text-red-500 mx-1 animate-pulse" />
-              using React & FastAPI
-            </p>
-
-          </div>
-        </div>
+  </div>
+</div>
 
       </div>
     </footer>
