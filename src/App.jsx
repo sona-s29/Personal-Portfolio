@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Portfolio from './components/Portfolio/Portfolio.jsx';
-
 function App() {
 
 
@@ -8,6 +7,7 @@ function App() {
     <>
       <div>
        <Portfolio/>
+       
       </div>
     </>
   )

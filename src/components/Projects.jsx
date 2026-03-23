@@ -67,26 +67,31 @@ const Projects = () => {
                   </div>
 
                   {/* Links */}
-                  <div className="flex flex-wrap gap-3">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-white/20 text-white hover:bg-white/5 hover:border-white/40 transition-all duration-300"
-                      onClick={() => alert("Demo link will be added")}
-                    >
-                      <ExternalLink size={16} className="mr-2" />
-                      Live Demo
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-white/20 text-white hover:bg-white/5 hover:border-white/40 transition-all duration-300"
-                      onClick={() => alert("GitHub link will be added")}
-                    >
-                      <Github size={16} className="mr-2" />
-                      View Code
-                    </Button>
-                  </div>
+                 <div className="flex flex-wrap gap-3">
+  {project.demoLink && (
+    <Button
+      variant="outline"
+      size="sm"
+      className="border-white/20 text-white hover:bg-white/5 hover:border-white/40 transition-all duration-300"
+      onClick={() => window.open(project.demoLink, "_blank")}
+    >
+      <ExternalLink size={16} className="mr-2" />
+      Live Demo
+    </Button>
+  )}
+
+  {project.githubLink && (
+    <Button
+      variant="outline"
+      size="sm"
+      className="border-white/20 text-white hover:bg-white/5 hover:border-white/40 transition-all duration-300"
+      onClick={() => window.open(project.githubLink, "_blank")}
+    >
+      <Github size={16} className="mr-2" />
+      View Code
+    </Button>
+  )}
+</div>
                 </div>
 
                 {/* Key Achievements */}

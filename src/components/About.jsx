@@ -1,3 +1,6 @@
+import React from "react";
+import { GraduationCap, User } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { personalInfo, education } from "../data/mock";
 import { Separator } from "./ui/separator";
 

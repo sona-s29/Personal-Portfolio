@@ -42,8 +42,8 @@ export const projects = [
     ],
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "REST API", "JWT"],
     featured: true,
-    demoLink: "",
-    githubLink: ""
+    demoLink: "https://github.com/sona-s29",
+    githubLink: "https://github.com/sona-s29"
   },
   {
     id: 2,
@@ -56,8 +56,8 @@ export const projects = [
     ],
     techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "REST API", "JWT"],
     featured: true,
-    demoLink: "",
-    githubLink: ""
+    demoLink: "https://github.com/sona-s29",
+    githubLink: "https://github.com/sona-s29"
   }
 ];
 

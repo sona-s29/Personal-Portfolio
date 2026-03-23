@@ -13,8 +13,9 @@ const Contact = () => {
   const form = useRef();
 
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    user_name: "",
+    user_email: "",
+    subject: "",
     message: ""
   });
 
@@ -22,6 +23,7 @@ const Contact = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
+  // HANDLE CHANGE
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -29,28 +31,38 @@ const Contact = () => {
     });
   };
 
+  // HANDLE SUBMIT
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     setSuccess(false);
     setError(false);
 
-    emailjs.sendForm(
-      "service_ia2fv0v",     // your service ID
-      "template_nyic4s3",    // your template ID
-      form.current,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    )
-    .then(() => {
-      setLoading(false);
-      setSuccess(true);
-      setFormData({ name: "", email: "", message: "" });
-    })
-    .catch(() => {
-      setLoading(false);
-      setError(true);
-    });
+    emailjs
+      .sendForm(
+        "service_4q6w9lh", // your service ID
+        "template_nyic4s3", // your template ID
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setLoading(false);
+        setSuccess(true);
+
+        setFormData({
+          user_name: "",
+          user_email: "",
+          subject: "",
+          message: ""
+        });
+      })
+      .catch((err) => {
+        console.log("EMAIL ERROR:", err);
+        setLoading(false);
+        setError(true);
+      });
   };
+
   return (
     <section id="contact" className="py-24 bg-[#0a0a0b] relative">
       <div className="max-w-7xl mx-auto px-6">
@@ -143,58 +155,59 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <form ref={form} onSubmit={handleSubmit} className="space-y-4">
-  
-  <Input
-    name="name"
-    placeholder="Your Name"
-    value={formData.name}
-    onChange={handleChange}
-    required
-    className="bg-white/5 border-white/10 text-white placeholder:text-gray-500"
-  />
 
-  <Input
-    name="email"
-    type="email"
-    placeholder="Your Email"
-    value={formData.email}
-    onChange={handleChange}
-    required
-    className="bg-white/5 border-white/10 text-white placeholder:text-gray-500"
-  />
+                <Input
+                  name="user_name"
+                  placeholder="Your Name"
+                  value={formData.user_name}
+                  onChange={handleChange}
+                  required
+                />
 
-  <Textarea
-    name="message"
-    placeholder="Your Message"
-    value={formData.message}
-    onChange={handleChange}
-    required
-    rows={5}
-    className="bg-white/5 border-white/10 text-white placeholder:text-gray-500 resize-none"
-  />
+                <Input
+                  name="user_email"
+                  type="email"
+                  placeholder="Your Email"
+                  value={formData.user_email}
+                  onChange={handleChange}
+                  required
+                />
 
-  <Button
-    type="submit"
-    disabled={loading}
-    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-  >
-    {loading ? "Sending..." : "Send Message"}
-  </Button>
+                <Input
+                  name="subject"
+                  placeholder="Subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                />
 
-  {/* SUCCESS */}
-  {success && (
-    <p className="text-green-400 text-sm mt-2">
-      ✅ Message sent successfully!
-    </p>
-  )}
+                <Textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                />
 
-  {/* ERROR */}
-  {error && (
-    <p className="text-red-400 text-sm mt-2">
-      ❌ Failed to send. Try again.
-    </p>
-  )}
-</form>
+                <Button type="submit" disabled={loading} className="w-full">
+                  {loading ? "Sending..." : "Send Message"}
+                </Button>
+
+                {/* SUCCESS */}
+                {success && (
+                  <p className="text-green-400 text-sm">
+                    ✅ Message sent successfully!
+                  </p>
+                )}
+
+                {/* ERROR */}
+                {error && (
+                  <p className="text-red-400 text-sm">
+                    ❌ Failed to send. Check console.
+                  </p>
+                )}
+
+              </form>
             </CardContent>
           </Card>
         </div>

@@ -1,6 +1,7 @@
 import { Badge } from "./ui/badge";
 import { Card } from "./ui/card";
 import { skills } from "../data/mock";
+import { Code, Database, Layout, Lightbulb, Server, Wrench } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [

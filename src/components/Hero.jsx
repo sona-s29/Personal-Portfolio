@@ -98,13 +98,16 @@ const Hero = () => {
               <Mail size={20} />
               <span className="text-sm">Email</span>
             </a>
-            <button
-              className="flex items-center space-x-2 text-gray-400 hover:text-blue-500 transition-all duration-300 hover:scale-110"
-              onClick={() => alert("Resume download will be implemented with backend")}
-            >
-              <Download size={20} />
-              <span className="text-sm">Download Resume</span>
-            </button>
+           <a
+  href="https://drive.google.com/file/d/1D4VVbenzKMC4rWNrtzwSGXCNmjrpWeKS/view?usp=drivesdk"
+  target="_blank"
+  rel="noopener noreferrer"
+  download
+  className="flex items-center space-x-2 text-gray-400 hover:text-blue-500 transition-all duration-300 hover:scale-110"
+>
+  <Download size={20} />
+  <span className="text-sm">Download Resume</span>
+</a>
           </div>
         </div>
       </div>

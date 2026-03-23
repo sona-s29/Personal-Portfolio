@@ -40,8 +40,8 @@ const Header = ({ activeSection }) => {
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-xl font-bold">
-            <span className="text-white">Sona</span>
-            <span className="text-blue-500">.</span>
+            <span className="text-white">Sona Kumari</span>
+            {/* <span className="text-blue-500">  Kumari</span> */}
           </div>
 
           {/* Desktop Navigation */}
