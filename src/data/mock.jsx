@@ -31,22 +31,9 @@ export const skills = {
 };
 
 export const projects = [
+
   {
     id: 1,
-    title: "CRM Web Application",
-    description: "Contributed to the development of a scalable CRM (Customer Relationship Management) web application, working on both frontend UI using React.js and backend integration using Node.js and Express.js.",
-    achievements: [
-      "Implemented RESTful APIs and optimized UI components",
-      "Ensured seamless data flow and improved performance",
-      "Enhanced user experience with responsive design"
-    ],
-    techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "REST API", "JWT"],
-    featured: true,
-    demoLink: "https://github.com/sona-s29",
-    githubLink: "https://github.com/sona-s29"
-  },
-  {
-    id: 2,
     title: "Job Portal Application",
     description: "Developed a full stack MERN-based job portal with authentication and role-based access control for job seekers and employers.",
     achievements: [
