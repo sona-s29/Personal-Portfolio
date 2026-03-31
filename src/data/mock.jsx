@@ -64,14 +64,14 @@ export const projects = [
 export const experience = [
   {
     id: 1,
-    role: "Full Stack Developer Intern",
+    role: "Full Stack Developer ",
     company: "Netcradus",
     duration: "Jan 2026 - Present",
     current: true,
     responsibilities: [
-      "Worked on the company's CRM web application, contributing to UI development using React.js and backend integration to ensure seamless functionality and improved user experience",
-      "Implemented RESTful API integration and enhanced frontend responsiveness, improving data flow and overall application performance",
-      "Collaborated on multiple web applications, supporting full stack development, debugging issues, and optimizing features for better scalability and usability"
+      "Developing and maintaining the company’s CRM web application using React.js, Node.js, and Express.js, ensuring scalable architecture and smooth user experience.",
+      "Designing and implementing RESTful APIs with secure authentication and efficient data handling to enable seamless frontend-backend integration.",
+      "Enhancing application performance and responsiveness by optimizing UI components, debugging issues, and collaborating with teams to deliver reliable features."
     ]
   }
-];
+]

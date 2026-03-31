@@ -39,10 +39,14 @@ const Header = ({ activeSection }) => {
     >
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold">
-            <span className="text-white">Sona Kumari</span>
-            {/* <span className="text-blue-500">  Kumari</span> */}
-          </div>
+          <div
+  className="text-xl font-bold cursor-pointer"
+  onClick={() => scrollToSection("home")}
+>
+  <span className="text-white hover:text-blue-500 transition-colors duration-200">
+    Sona Kumari
+  </span>
+</div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">

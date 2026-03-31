@@ -29,8 +29,7 @@ const About = () => {
                   Focused on clean code, performance optimization, and delivering seamless user experiences.
                 </p>
                 <p className="text-gray-400 leading-relaxed">
-                  Currently working as a Full Stack Developer Intern at Netcradus, contributing to scalable CRM solutions 
-                  and enhancing both frontend responsiveness and backend API integration.
+                  Currently working as a Full Stack Developer at Netcradus, building scalable CRM solutions and improving frontend performance along with efficient backend API integration.
                 </p>
               </div>
             </div>
